@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* global */
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  display: flex; /* primera propiedad que habilita aplicar flexbox */
+  flex-direction: row; /*row ; column ; row-reverse ; column-reverse */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+}
+.gridConteiner {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "titulo titulo"
+    "video encabezado"
+    "footer footer";
+}
+header {
+  grid-area: header;
+  display: flex;
+  background-image: radial-gradient(
+    circle 767px at 10.2% 22.1%,
+    rgb(3, 3, 3) 10%,
+    #b0f2c2 90%
+  );
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+ul li :hover {
+  font-weight: 800;
+  color: black;
+}
+.rotate {
+  transform: rotate(-45deg);
+}
+.titulo {
+  grid-area: titulo;
+  display: grid;
+}
+.encabezado {
+  grid-area: encabezado;
+}
+.video {
+  grid-area: video;
+  background-color: #246355;
+  width: 500;
+  height: 350;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.bgColor {
+  background-color: #020202;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.p-50 {
+  padding: 50px;
+}
+.gridContacto {
+  min-height: 100vh;
+  padding: 0%;
+}
+.contactoFooter {
+  text-align: right;
+  font-size: 25px;
+}
+
+/* home */
+
+h1 {
+  display: grid;
+  background-color: #246355;
+  font-family: tahoma; /* modifica familia tipografica*/
+  font-size: 50px; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  text-align: center;
+  padding: 35px;
+  align-content: space-between;
+}
+h2 {
+  font-family: arial; /* modifica familia tipografica*/
+  font-size: 25px; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  text-align: center;
+  padding: 53px;
+}
+
+/* recetas */
+.gridRecetas {
+  display: grid;
+  grid-template-columns: 200% 200%;
+  grid-template-areas: receta1 alfajores;
+}
+.recetas {
+  text-align: center;
+}
+.recetasTextos {
+  min-height: 100vh;
+  font-family: arial; /* modifica familia tipografica*/
+  font-size: 2rem; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  background-color: #b0f2c2;
+}
+
+/* talleres */
+
+.tableroCompleto {
+  display: grid;
+  grid-template-columns: 200% 200%;
+  font-family: tahoma;
+  font-size: 25px;
+  justify-content: space-between;
+}
+.tablero {
+  margin: auto;
+}
+table {
+  background-color: white;
+  text-align: left;
+  width: 50%;
+}
+th,
+td {
+  border: solid 1px black;
+  padding: 20px;
+}
+.encabezado {
+  background-color: #246355;
+  color: rgb(2, 2, 2);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+/*galeria*/
+.gridimg {
+  display: grid;
+  grid-template-columns: 200% 200%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "tartasimg tartasimg"
+    "tortasimg tortasimg"
+    "brownieimg brownieimg"
+    "alfajoresimg alfajoresimg";
+  justify-content: space-between;
+}
+.brownieimg {
+  grid-area: brownieimg;
+}
+.alfajoresimg {
+  grid-area: alfajoresimg;
+}
+.tartasimg {
+  grid-area: tartasimg;
+}
+.tortasimg {
+  grid-area: tortasimg;
+}
+.imgTortas {
+  background-color: #246355;
+}
+/* contacto */
+
+.gridContacto {
+  display: grid;
+  grid-template-columns: 100% 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "contactoimg contactoimg"
+    "contacto contacto";
+  align-items: stretch;
+  justify-content: space-between;
+}
+.contacto {
+  background-color: #ffb5afa8;
+  font-family: tahoma; /* modifica familia tipografica*/
+  font-size: 2.5rem; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  text-align: left;
+  padding: 30%;
+}
+.contactoimg {
+  background-color: #ffb6af;
+}
+section {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.buttons a:hover {
+  transform: scale(1.2);
+}
+#contacto {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  line-height: 1.42857143;
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #314652;
+  visibility: visible !important;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*mediaquerie*/
+
+@media only screen and (max-width: 768px) {
+  header {
+    background-image: radial-gradient(
+      circle 767px at 10.2% 22.1%,
+      #747474 10%,
+      #ffb6af 90%
+    );
+    flex-direction: column;
+  }
+
+  ul li :hover {
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+  }
+  .gridConteiner {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "titulo titulo"
+      "video video"
+      "encabezado encabezado"
+      "footer footer";
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .tartasimg {
+    max-width: 320px;
+  }
+  .tortasimg {
+    max-width: 320px;
+  }
+  .alfajoresimg {
+    max-width: 320px;
+  }
+  .brownieimg {
+    max-width: 320px;
+  }
+  .imgTortas {
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .encabezado {
+    display: none;
+  }
+  .contenido {
+    display: flex;
+    background-color: #c7f6d4;
+    color: rgb(54, 89, 119);
+    text-align: center;
+    inline-size: min-content;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tableroCompleto {
+    display: grid;
+    font-family: tahoma;
+  }
+  .video {
+    display: flex;
+  }
+  .alfajores {
+    max-width: 320px;
+  }
+  .brownie {
+    max-width: 320px;
+  }
+  .recetasTextos {
+    background-color: #246355;
+  }
+  .gridContacto {
+    background-color: #000000;
+  }
+  .contacto {
+    background-color: #000000;
+    color: aliceblue;
+    text-align: center;
+  }
+  .contactoimg {
+    display: grid;
+    justify-content: end;
+  }
+  .gridContacto {
+    display: grid;
+    grid-template-columns: 200%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "contactoimg"
+      "contacto";
+    justify-content: space-between;
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: stretch;
+    align-items: center;
+  }
+  section {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons {
+    min-width: 320px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .buttons a:hover {
+    transform: scale(1.2);
+  }
+}
